@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: brown;
+        }
+        
+        .btn{
+            background-color: rgb(191, 221, 221);
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        FACTORIAL ASSIGNMENT
+    </h2>
+    <div class="container">
+    <br>    <input type="number" class="input" placeholder="Enter the number"/>
+    
+</div>
+       <br> <button class="btn" onclick="calculate()">CALCULATE</button>
+       <p class="p"></p>
+       <script>
+           function factorial(n){
+               if(n<=1){
+                   return 1;
+               }
+               return n*factorial(n-1);
+
+           }
+           function calculate(){
+               var input =document.querySelector('.input');
+               var p=document.querySelector('.p');
+               var result=factorial(input.value);
+               p.innerText=result;
+           }
+       </script>
+    
+</body>
+</html>
